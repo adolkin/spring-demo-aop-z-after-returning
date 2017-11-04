@@ -21,7 +21,8 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts = null;
 		
 		try {
-			theAccounts = theAccountDAO.findAccounts();
+			boolean tripWire = true;
+			theAccounts = theAccountDAO.findAccounts(tripWire);
 		}
 		catch (Exception exc) {
 			System.out.println("\n\nMain Program.... caught exception" + exc);
